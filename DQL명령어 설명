@@ -75,3 +75,18 @@ SELECT d.dno, d.dname, e.eno, e.ename
 FROM department d
 FULL JOIN employee ON d.dno = e.dno;
                 
+
+--NVL (Null Value) : null 값을 다른 값으로 대체
+SELECT ename, nvl(commission,0) as commission
+FROM employee;
+
+--NEXT DAY 다음 주어진 요일 날짜 찾기
+--SELECT ename, next_day(sysdate,'FRIDAY')as next day FROM dual;
+
+--TRUNC : 날짜 또는 숫자의 소수부 제거
+SELECT ENAME, TRUNC(salary) as Trunc_Salary FROM employee;
+
+--Floor, CEIL, ROUND : 숫자 반올림 및 내림(버리고,올리고,반올림)
+SELECT ename, floor(salary) AS FLOOR_SALARY FROM employee;
+SELECT ename, CEIL(SALARY) AS CEIL_SALARY FROM emlployee;
+SELECT ename, ROUND(salary,2)AS ROUND_SALARY FROM employee;
