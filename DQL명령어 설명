@@ -90,3 +90,6 @@ SELECT ENAME, TRUNC(salary) as Trunc_Salary FROM employee;
 SELECT ename, floor(salary) AS FLOOR_SALARY FROM employee;
 SELECT ename, CEIL(SALARY) AS CEIL_SALARY FROM emlployee;
 SELECT ename, ROUND(salary,2)AS ROUND_SALARY FROM employee;
+
+--ABS : 절대값 계산 -를 없앰.
+SELECT ename, ABS(commission) as ABS_COMMISSION FROM employee;
