@@ -28,7 +28,15 @@ ORDER BY : 검색 결과를 정렬하기 위해 사용
       --ASC :오름차순(Default 값)
       --DESC:내림차순
 
-UNION    : 두개 이상의 SELECT문 결과르 결합해서 하나의 결과 집합으로 반환
+UNION    : 두개 이상의 SELECT문 결과를 결합해서 하나의 결과 집합으로 반환(중복 행을 제거하고 정렬된 상태로 반환)
+           UNION은 SQL 두개 이상의 SELECT문 결과를 합쳐서 하나의 결과 집합으로 반환하는 연산자
+           UNION 중복된 행을 제거하고 중복된 행을 포함하지 않는 결과를 생성
+        SELECT column1, column2,...
+        FROM table1
+        UNION
+        SELECT column1,column2,...
+        FROM table2;
+        
       예제코드 ) SELECT 열이름 FROM 테이블1;
                 UNION
                  SELECT 열이름 FROM 테이블2;
