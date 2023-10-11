@@ -142,4 +142,4 @@ FETCH : 데이터 조회 및 검색 목적으로 사용
 FETCH FIRST : 처음 10개의 행을 가져옴
 결과 집합의 처음 부터 시작하여 지정된 개수의 행을 가져옴
 OFFSET 10 ROWS : 처음 10개의 행을 건너뛴 다음에 데이터 검색을 시작함
-FETCH FIRST 10 ROWS ONLY:
+FETCH FIRST 10 ROWS ONLY: 그 다음 10개의 행을 가져옴
