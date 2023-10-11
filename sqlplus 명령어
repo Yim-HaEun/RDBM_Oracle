@@ -11,7 +11,10 @@ sqlplus sys/oracle as sysdba
 ALTER SESSION SET "_ORACLE_SCRIPT" = TRUE;
 CONN khcafe/khcafe
 select *from menu;
+
 2.
 exit
+
+//다시 접속
 sqlplus khcafe/khcafe as sysdba;
 select *from menu;
