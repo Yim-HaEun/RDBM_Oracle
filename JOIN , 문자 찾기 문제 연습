@@ -51,3 +51,13 @@ WHERE description LIKE '%초코%';
 --외래키 제약 조건 추가
 ALTER TABLE orders ADD CONSTRAINT fk_orders_cafe FOREIGN KEY(cafe_id)REFERENCES cafes(cafe_id);
 ALTER TABLE orders ADD CONSTRAINT fk_orders_cafe FOREIGN KEY(menu_id) REFERENCES menu(menu_id);
+
+--테이블 코멘트 추가
+COMMENT ON TABLE orders IS '주문 정보를 저장하는 테이블';
+
+2개 JOIN하는 법
+--주문 번호o.order_id 카페이름c.c_name as CAFE_NAME 메뉴이름m.menu_name 메뉴가격m.price 총수량o.quantity 총금액o.total_price
+SELECT  o.order_id,c.c_name AS CAFE_NAME, m.menu_name, m.price,o.quantity,o.total_price
+FROM orders o JOIN cafes c ON o.cafe_id = c.cafe_id
+JOIN menu m ON o.menu_id = m.menu_id
+WHERE o.order_id =1;
