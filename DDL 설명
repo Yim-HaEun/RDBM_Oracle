@@ -45,7 +45,17 @@ DROP (삭제) :
   DROP TABLE : 테이블을 삭제한다
   DROP VIEW  : VIEW 삭제
   DROP DATABASE : 데이터 베이스를 삭제한다
-  DROP INDEX :  데이터 인덱스를 삭제한다
+  DROP INDEX :  데이터 인덱스를 삭제한다.
+데이터 베이스에서 객체 (테이블,뷰,인덱스,사용자 등)를 삭제하는데 사용되는 SQL 명령어 (영구 삭제)
+DROP TABLE 테이블이름;
+DROP VIEW 뷰이름;
+DROP INDEX 인덱스이름;
+DROP USER 사용자이름;
+
+CASCADE : 해당 명령이 연결된 객체 또는 데이터 영향 주는 방식 지정
+          주로 삭제 명령으로 사용
+          삭제 명령이 관련된 모든 객체나 데이터를 삭제
+          DROP TABLE 부모테이블 CASCADE CONSTRAINTS;
 
 GRANT (권한부여) :
   권한을 부여하는 키워드
