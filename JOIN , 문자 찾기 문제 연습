@@ -47,3 +47,7 @@ GROUP BY c_name;
 --'초코'이 설명에 포함된 메뉴 항목이 있는 카페 선택:
 SELECT * FROM cafes c JOIN menu m ON c.cafe_id = m.cafe_id
 WHERE description LIKE '%초코%';
+
+--외래키 제약 조건 추가
+ALTER TABLE orders ADD CONSTRAINT fk_orders_cafe FOREIGN KEY(cafe_id)REFERENCES cafes(cafe_id);
+ALTER TABLE orders ADD CONSTRAINT fk_orders_cafe FOREIGN KEY(menu_id) REFERENCES menu(menu_id);
